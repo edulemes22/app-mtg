@@ -6,7 +6,6 @@ import { IonicModule } from '@ionic/angular';
 
 import { TypesPageRoutingModule } from './types-routing.module';
 
-import { TypesPage } from './types.page';
 
 @NgModule({
   imports: [
@@ -15,6 +14,5 @@ import { TypesPage } from './types.page';
     IonicModule,
     TypesPageRoutingModule
   ],
-  declarations: [TypesPage]
 })
 export class TypesPageModule {}

@@ -6,8 +6,6 @@ import { IonicModule } from '@ionic/angular';
 
 import { FormatsPageRoutingModule } from './formats-routing.module';
 
-import { FormatsPage } from './formats.page';
-
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +13,6 @@ import { FormatsPage } from './formats.page';
     IonicModule,
     FormatsPageRoutingModule
   ],
-  declarations: [FormatsPage]
+  providers: []
 })
 export class FormatsPageModule {}

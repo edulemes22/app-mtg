@@ -1,13 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { SetsPage } from './sets.page';
 import { SetsListComponent } from './sets-list/sets-list.component';
+import { SetsDetailComponent } from './sets-detail/sets-detail.component';
 
 const routes: Routes = [
   {
     path: '',
     component: SetsListComponent
+  },
+  {
+    path: 'detail',
+    component: SetsDetailComponent
+  },
+  {
+    path: '/:id',
+    component: SetsDetailComponent
   }
 ];
 

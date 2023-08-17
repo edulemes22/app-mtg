@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { CardsPage } from './cards.page';
 import { CardsListComponent } from './cards-list/cards-list.component';
+import { CardsDetailComponent } from './cards-detail/cards-detail.component';
 
 const routes: Routes = [
   {
     path: '',
     component: CardsListComponent
+  },
+  {
+    path: 'detail',
+    component: CardsDetailComponent
   }
 ];
 
