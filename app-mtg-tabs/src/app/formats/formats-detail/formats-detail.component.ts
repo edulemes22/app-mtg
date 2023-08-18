@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRouteSnapshot } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-formats-detail',
@@ -10,8 +10,8 @@ export class FormatsDetailComponent  implements OnInit {
 
   id: string | null = "";
 
-  constructor(route: ActivatedRouteSnapshot) {
-    this.id = route.paramMap.get('id');
+  constructor(route: ActivatedRoute) {
+    this.id = route.snapshot.paramMap.get('id');
   }
 
   ngOnInit() {}

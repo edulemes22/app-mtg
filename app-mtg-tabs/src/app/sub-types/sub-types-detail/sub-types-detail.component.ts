@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-sub-types-detail',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubTypesDetailComponent  implements OnInit {
 
-  constructor() { }
+  id: string | null = "";
+
+  constructor(route: ActivatedRoute) {
+    this.id = route.snapshot.paramMap.get('id');
+  }
 
   ngOnInit() {}
 
