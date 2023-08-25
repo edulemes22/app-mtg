@@ -12,10 +12,6 @@ const routes: Routes = [
   {
     path: 'detail',
     component: SubTypesDetailComponent
-  },
-  {
-    path: '/:id',
-    component: SubTypesDetailComponent
   }
 ];
 

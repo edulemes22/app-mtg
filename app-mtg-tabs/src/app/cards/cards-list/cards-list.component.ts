@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CardsService } from '../cards.service';
+import { Card, ModelCard } from 'src/app/shared/card';
+import { InfiniteScrollCustomEvent } from '@ionic/angular';
 
 @Component({
   selector: 'app-cards-list',
@@ -7,8 +10,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardsListComponent  implements OnInit {
 
-  constructor() { }
+  cards! : Card[];
 
-  ngOnInit() {}
+  items: string[] = [];
+
+  constructor(private service: CardsService) { }
+
+  ngOnInit() {
+
+    this.generateItems();
+
+    this.service.listar().subscribe(resposta => {
+
+      this.cards = resposta.cards;
+
+      console.log(this.cards)
+
+    });
+
+  }
+
+  private generateItems() {
+    const count = this.items.length + 1;
+    for (let i = 0; i < 50; i++) {
+      this.items.push(`Item ${count + i}`);
+    }
+  }
+
+  onIonInfinite(ev: any) {
+    this.generateItems();
+    setTimeout(() => {
+      (ev as InfiniteScrollCustomEvent).target.complete();
+    }, 500);
+  }
 
 }

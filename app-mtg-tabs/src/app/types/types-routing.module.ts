@@ -12,10 +12,6 @@ const routes: Routes = [
   {
     path: 'detail',
     component: TypesDetailComponent
-  },
-  {
-    path: '/:id',
-    component: TypesDetailComponent
   }
 ];
 

@@ -1,7 +1,7 @@
-export interface Model {
-    cards: Card[]
-  }
-  
+export interface ModelCard{
+  cards: Card[]
+}
+
   export interface Card {
     name: string
     manaCost: string

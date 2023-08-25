@@ -1,15 +1,15 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { BaseService } from '../shared/base.service';
-import { ModelCard } from '../shared/card';
+import { Model } from '../shared/model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CardsService extends BaseService<ModelCard, number> {
+export class SetsService extends BaseService<Model, number> {
 
   constructor(override http: HttpClient) {
-    super(http, "cards");
+    super(http, "sets");
   }
-
+  
 }

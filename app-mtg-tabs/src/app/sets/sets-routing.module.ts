@@ -12,10 +12,6 @@ const routes: Routes = [
   {
     path: 'detail',
     component: SetsDetailComponent
-  },
-  {
-    path: '/:id',
-    component: SetsDetailComponent
   }
 ];
 

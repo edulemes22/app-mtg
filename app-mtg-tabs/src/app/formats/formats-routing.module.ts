@@ -12,10 +12,6 @@ const routes: Routes = [
   {
     path: 'detail',
     component: FormatsDetailComponent
-  },
-  {
-    path: ':id',
-    component: FormatsDetailComponent
   }
 ];
 
