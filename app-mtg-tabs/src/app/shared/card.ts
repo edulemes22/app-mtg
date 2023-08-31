@@ -1,5 +1,6 @@
 export interface ModelCard{
   cards: Card[]
+  card: Card
 }
 
   export interface Card {

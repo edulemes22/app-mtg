@@ -12,8 +12,7 @@
   </ion-header>
   <ion-list *ngFor="let card of cards">
     <ion-item>
-      <!--ion-label>{{card.name}}</ion-label-->
-      <ion-card>
+      <ion-card routerLink="detail/{{card.id}}">
         <ion-card-header>
           <ion-card-title>{{card.name}}</ion-card-title>
           <ion-card-subtitle>{{card.type}}</ion-card-subtitle>

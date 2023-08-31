@@ -14,8 +14,10 @@ export class BaseService<T, N> {
     return this.http.get<T>(this.url + this.path);
   }
   
-  buscar(id: N): Observable<T> {
+  buscar(id: N | null): Observable<T> {
+
     return this.http.get<T>(`${this.url + this.path}/${id}`);
+    
   }
 
 }

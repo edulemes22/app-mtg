@@ -24,8 +24,6 @@ export class CardsListComponent  implements OnInit {
 
       this.cards = resposta.cards;
 
-      console.log(this.cards)
-
     });
 
   }

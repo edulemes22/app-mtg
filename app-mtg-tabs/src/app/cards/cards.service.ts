@@ -6,7 +6,7 @@ import { ModelCard } from '../shared/card';
 @Injectable({
   providedIn: 'root'
 })
-export class CardsService extends BaseService<ModelCard, number> {
+export class CardsService extends BaseService<ModelCard, string> {
 
   constructor(override http: HttpClient) {
     super(http, "cards");
